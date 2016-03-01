@@ -1,5 +1,6 @@
 # 这是迅雷云监工的docker程序
 # 云监工原作者powergx
+# 镜像构建者sanzuwu
 
 FROM tutum/ubuntu:trusty
 MAINTAINER sanzuwu <sanzuwu@gmail.com>
@@ -18,7 +19,7 @@ RUN apt-get update && apt-get install -y git wget sudo
 RUN mkdir /app 
 WORKDIR /app
 #下载云监工源代码
-RUN git clone https://github.com/sanzuwu/crysadm.git
+RUN git clone https://github.com/q299127/crysadm.git
 #redis数据库保存目录
 VOLUME ["/var/lib/redis"]
 #安装python，redis
